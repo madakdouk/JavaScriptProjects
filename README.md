@@ -4,10 +4,10 @@ This is where my JavaScript projects are kept.
 
 ## Projects
 
-- [Calculator](https://github.com/madakdouk/Tech-Academy-Projects/tree/main/JavaScript%20Projects/calculator)
-- [Tic-Tac-Toe](https://github.com/madakdouk/Tech-Academy-Projects/tree/main/JavaScript%20Projects/TicTacToe)
-- [Pizza Menu](https://github.com/madakdouk/Tech-Academy-Projects/tree/main/JavaScript%20Projects/pizza_project)
-- [To-do App](https://github.com/madakdouk/Tech-Academy-Projects/tree/main/JavaScript%20Projects/todoApp)
+- [Calculator](https://github.com/madakdouk/JavaScriptProjects/tree/main/calculator)
+- [Tic-Tac-Toe](https://github.com/madakdouk/JavaScriptProjects/tree/main/TicTacToe)
+- [Pizza Menu](https://github.com/madakdouk/JavaScriptProjects/tree/main/pizza_project)
+- [To-do App](https://github.com/madakdouk/JavaScriptProjects/tree/main/todoApp)
 - [Portfolio Website](https://madakdouk.github.io/)
 
 ### Calculator

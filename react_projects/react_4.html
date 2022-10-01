@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>challenges</title>
+        <meta charset="utf-8">
+        <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+        <style>
+            body {
+                opacity:1;
+                transition: 1s opacity;
+            }
+            body.fade-out {
+                opacity:0;
+                transition:none;
+            }
+
+            .open-button {
+                background-color:black;
+                color:white;
+                padding: 16px 20px;
+                border:none;
+                cursor:pointer;
+                opacity:0.8;
+                position:sticky;
+                bottom:0;
+                right:0;
+                width:280px;
+            }
+
+            .form-popup {
+                display:none;
+                position:fixed;
+                bottom:0;
+                right:15px;
+                border: 3px solid black;
+                z-index:9;
+            }
+
+            .form-container {
+                max-width:300px;
+                padding:10px;
+            }
+
+            .form-container input {
+                padding:15px;
+                margin: 5px 0 22px 0;
+                border:none;
+                background:white;
+            }
+
+            .form-container .btn {
+                background-color:#04AA6D;
+                color:black;
+                padding:16px 20px;
+                border:none;
+                cursor:pointer;
+                width:100%;
+                margin-bottom:10px;
+                opacity:0.8;
+            }
+
+            .form-container .cancel {
+                background-color:red;
+            }
+
+            .img {
+                animation: zoominoutsinglefeatured 15s forwards;
+            }
+
+            @keyframes zoominoutsinglefeatured {
+                0% {
+                    transform: scale(1,1);
+                }
+                50% {
+                    transform: scale(1.2,1.2);
+                }
+                100% {
+                    transform: scale(1,1);
+                }
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <script>
+            document.body.classList.add('fade-out');
+            window.addEventListener('DOMContentLoaded', () => {
+                document.body.classList.remove('fade-out');
+            });
+            function validateForm() {
+                let x = document.forms["phone"]["number"].value;
+                if (x == "") {
+                    alert("Phone number must be filled out.");
+                    return false;
+                }
+            }
+
+            function openForm() {
+                document.getElementById('phone').style.display = "block";
+            }
+
+            function closeForm() {
+                document.getElementById('phone').style.display = "none";
+            }
+        </script>
+        <h3 style="font-size:10vw;">Testing vw</h3>
+        <img class="img" src="mariahhtml.jpg" height='500px' width='600px' alt="mariah">
+        <div class="form-popup" id="phone">
+            <form class="form-container" name="phone" onsubmit="return validateForm()" method="post">
+                <h1>Contact</h1>
+                <label>Phone number:</label>
+                <input type="text" name="number" placeholder="Phone number" required>
+                <button type="submit" class="btn">Submit</button>
+                <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+            </form>
+        </div>
+        <button class="open-button" onclick="openForm()">Contact</button>
+    </body>
+</html>
